@@ -49,7 +49,6 @@
             clearInterval(timerID);
         }
     }
-
     const play = () => {
         isPlaying = !isPlaying;
         pausePlayBtn.innerHTML = FA_PAUSE;
