@@ -1,16 +1,16 @@
 (function(time = 2000) {
     let container = document.querySelector('#slides');
-    let slides = document.querySelectorAll('.slide');
+    let slides = document.querySelectorAll('.slide'); //ок
     let controls = document.querySelector('#controls-container');
-    let indicatorsContainer = document.querySelector('#indicators-container');
-    let indicators = document.querySelectorAll('.indicator');
-    let pausePlayBtn = document.querySelector('#pause');
-    let nextBtn = document.querySelector('#next');
-    let prevBtn = document.querySelector('#prev');
+    let indicatorsContainer = document.querySelector('#indicators-container'); //ок
+    let indicators = document.querySelectorAll('.indicator'); //ок
+    let pausePlayBtn = document.querySelector('#pause'); //ок
+    let nextBtn = document.querySelector('#next'); //ок
+    let prevBtn = document.querySelector('#prev'); //ок
 
 
     let slidesCount = slides.length;
-    let currentSlide = 0;
+    let currentSlide = 0; //ок
     let isPlaying = true;
     let interval = time;
     let timerID = null;
@@ -43,7 +43,8 @@
         gotoNth(currentSlide - 1);
     }
     const pause = () => {
-        if (isPlaying) {
+        //было три тире
+        if (isPlaying == true) {
             isPlaying = !isPlaying;
             pausePlayBtn.innerHTML = FA_PLAY;
             clearInterval(timerID);
@@ -69,10 +70,11 @@
 
         if (target.classList.contains('indicator')) {
             pause();
-            gotoNth(+target.getAttribute('data-slide-to'));
+            gotoNth(Number(target.getAttribute('data-slide-to')));
         }
     }
     const pressKey = (e) => {
+        let key = e.key;
         if (e.key === LEFT_ARROW) prev();
         if (e.key === RIGHT_ARROW) next();
         if (e.key === SPACE) pausePlay();
@@ -98,7 +100,7 @@
         controls.style.display = 'block';
         indicatorsContainer.style.display = 'block';
         setListeners();
-        timerId = setInterval(gotoNext, interval);
+        timerID = setInterval(gotoNext, interval);
     };
     init();
-}());
+})();
