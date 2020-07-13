@@ -8,7 +8,6 @@
     let nextBtn = document.querySelector('#next'); //ок
     let prevBtn = document.querySelector('#prev'); //ок
 
-
     let slidesCount = slides.length;
     let currentSlide = 0; //ок
     let isPlaying = true;
@@ -18,13 +17,11 @@
     let swipeEndX = null;
 
 
-
     const FA_PLAY = 'Play';
     const FA_PAUSE = 'Pause';
     const SPACE = ' ';
     const LEFT_ARROW = 'ArrowLeft';
     const RIGHT_ARROW = 'ArrowRight';
-
 
 
     const gotoNth = (n) => {
