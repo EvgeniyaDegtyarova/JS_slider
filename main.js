@@ -1,15 +1,15 @@
 (function(time = 2000) {
     let container = document.querySelector('#slides');
-    let slides = document.querySelectorAll('.slide'); //ок
+    let slides = document.querySelectorAll('.slide');
     let controls = document.querySelector('#controls-container');
-    let indicatorsContainer = document.querySelector('#indicators-container'); //ок
-    let indicators = document.querySelectorAll('.indicator'); //ок
-    let pausePlayBtn = document.querySelector('#pause'); //ок
-    let nextBtn = document.querySelector('#next'); //ок
-    let prevBtn = document.querySelector('#prev'); //ок
+    let indicatorsContainer = document.querySelector('#indicators-container');
+    let indicators = document.querySelectorAll('.indicator');
+    let pausePlayBtn = document.querySelector('#pause');
+    let nextBtn = document.querySelector('#next');
+    let prevBtn = document.querySelector('#prev');
 
     let slidesCount = slides.length;
-    let currentSlide = 0; //ок
+    let currentSlide = 0;
     let isPlaying = true;
     let interval = time;
     let timerID = null;
@@ -17,8 +17,8 @@
     let swipeEndX = null;
 
 
-    const FA_PLAY = 'Play';
-    const FA_PAUSE = 'Pause';
+    const FA_PLAY = '<i class="fas fa-play fa-2x"></i>';
+    const FA_PAUSE = '<i class="fas fa-pause fa-2x">';
     const SPACE = ' ';
     const LEFT_ARROW = 'ArrowLeft';
     const RIGHT_ARROW = 'ArrowRight';
@@ -40,7 +40,7 @@
         gotoNth(currentSlide - 1);
     }
     const pause = () => {
-        //было три тире
+
         if (isPlaying == true) {
             isPlaying = !isPlaying;
             pausePlayBtn.innerHTML = FA_PLAY;

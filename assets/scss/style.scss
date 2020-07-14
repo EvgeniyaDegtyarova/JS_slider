@@ -3,13 +3,13 @@
 }
 
 body {
-    margin: 10px;
-}
-
-body {
-    background-image: url(https://www.dhresource.com/600x600/f2/albu/g8/M01/9B/E7/rBVaV13TFBmAEDq1AASLvha0jJ0752.jpg);
+    padding: 0;
+    margin: 0;
+    background-image: url(https://image.freepik.com/foto-gratis/textura-roja-tela_23-2148134752.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: round;
+    position: relative;
 }
 
 .container {
@@ -19,12 +19,12 @@ body {
 
 h1 {
     text-align: center;
-    color: blue;
+    color: rgb(156, 228, 222);
 }
 
 .carousel {
     position: relative;
-    border: 4px solid blueviolet;
+    border: 4px solid rgb(197, 94, 99);
 }
 
 .slides {
@@ -60,29 +60,40 @@ h1 {
 }
 
 .controls {
-    display: none;
+    width: 100%;
+    display: flex;
     justify-content: center;
     text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    z-index: 3;
 }
 
 .control {
-    /*как их выбить из блока????*/
-    margin-top: 10px;
-    min-width: 100px;
-    &:not(:last-child) {
-        margin-right: 20px;
+    margin: 5px 20px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
     }
 }
 
+.fas {
+    color: #bd003f;
+}
+
 .indicators {
-    width: 200px;
-    display: none;
-    justify-content: space-between;
-    z-index: 2;
     position: absolute;
-    left: 50%;
-    transform: translateX(-35%);
-    bottom: 50px;
+    left: calc(50% - 166px/2);
+    bottom: 60px;
+    z-index: 3;
 }
 
 .indicator {
@@ -90,18 +101,19 @@ h1 {
     min-width: 20px;
     background-color: rgba($color: #ffffff, $alpha: 0.5);
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: 3px solid transparent;
+    margin-right: 5px;
+    margin-left: 5px;
     &.active {
-        border: 1px solid #f0d800;
-        background-color: rgba($color: #000000, $alpha: 0.3);
+        border: 3px solid #bd003f;
         border-radius: 50%;
-        background-color: red;
     }
 }
 
 button,
 select {
     text-transform: none;
+    overflow: visible;
 }
 
 .active {
