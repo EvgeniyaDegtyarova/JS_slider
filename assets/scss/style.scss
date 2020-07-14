@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    background-image: url(https://www.juliusbaer.com/fileadmin/_processed_/8/5/csm_Peoples_Square_ed751964ea.jpg);
+    background-image: url(https://www.dhresource.com/600x600/f2/albu/g8/M01/9B/E7/rBVaV13TFBmAEDq1AASLvha0jJ0752.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -60,18 +60,18 @@ h1 {
 }
 
 .controls {
-    display: inline-block;
+    display: none;
     justify-content: center;
     text-align: center;
 }
 
 .control {
-    position: absolute;
-    margin-bottom: 100px;
+    /*как их выбить из блока????*/
+    margin-top: 10px;
     min-width: 100px;
-    display: inline-block;
-    margin: 2px 0;
-    background-color: coral;
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
 }
 
 .indicators {
@@ -81,7 +81,7 @@ h1 {
     z-index: 2;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-35%);
     bottom: 50px;
 }
 
@@ -95,22 +95,16 @@ h1 {
         border: 1px solid #f0d800;
         background-color: rgba($color: #000000, $alpha: 0.3);
         border-radius: 50%;
+        background-color: red;
     }
 }
 
-.button {
-    height: 24px;
-    display: inline-block;
-    margin-bottom: 10px;
-    opacity: 1;
-    z-index: 2;
+button,
+select {
+    text-transform: none;
 }
 
 .active {
     opacity: 1;
     z-index: 2;
-}
-
-.indicator.active {
-    background-color: red;
 }
