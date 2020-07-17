@@ -1,12 +1,15 @@
 (function(time = 2000) {
-    let container = document.querySelector('#slides');
-    let slides = document.querySelectorAll('.slide');
-    let controls = document.querySelector('#controls-container');
+    //let container = document.querySelector('#slides');
+
+    let container = document.querySelector('carousel');
+
+    let slides = document.querySelectorAll('.slide'); //ок
+    let controls = document.querySelector('#controls-container'); //ок
     let indicatorsContainer = document.querySelector('#indicators-container');
-    let indicators = document.querySelectorAll('.indicator');
-    let pausePlayBtn = document.querySelector('#pause');
-    let nextBtn = document.querySelector('#next');
-    let prevBtn = document.querySelector('#prev');
+    let indicators = document.querySelectorAll('.indicator'); //ок
+    let pausePlayBtn = document.querySelector('#pause'); //ок
+    let nextBtn = document.querySelector('#next'); //ок
+    let prevBtn = document.querySelector('#prev'); //ок
 
     let slidesCount = slides.length;
     let currentSlide = 0;
