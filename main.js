@@ -1,7 +1,7 @@
 (function(time = 2000) {
-    //let container = document.querySelector('#slides');
+    let container = document.querySelector('#slides');
 
-    let container = document.querySelector('carousel');
+    //let container = document.querySelector('#carousel');
 
     let slides = document.querySelectorAll('.slide'); //ок
     let controls = document.querySelector('#controls-container'); //ок
@@ -60,10 +60,14 @@
         gotoNext();
     }
     const prev = () => {
-        pause();
-        gotoPrev();
+            pause();
+            gotoPrev();
+        }
+        //const pausePlay = () => (isPlaying ? pause() : play());
+
+    function pausePlay() {
+        return isPlaying ? pause() : play();
     }
-    const pausePlay = () => (isPlaying ? pause() : play());
 
     const indicate = (e) => {
         let target = e.target;
