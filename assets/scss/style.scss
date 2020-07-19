@@ -91,14 +91,16 @@ h1 {
 
 .indicators {
     position: absolute;
-    left: 327px;
     bottom: 60px;
     z-index: 3;
-    @media (max-width: 576px) {
-        left: 227px;
+    @media (min-width: 992px) {
+        left: 300px;
     }
-    @media (max-width: 768px) {
-        left: 307px;
+    @media (min-width: 576px) {
+        left: 200px;
+    }
+    @media (min-width: 768px) {
+        left: 290px;
     }
 }
 
@@ -106,13 +108,13 @@ h1 {
     min-height: 20px;
     min-width: 20px;
     background-color: rgba($color: #ffffff, $alpha: 0.5);
-    border-radius: 80%;
-    border: 7px solid transparent;
+    border-radius: 50%;
+    border: 3px solid transparent;
     margin-right: 7px;
     margin-left: 7px;
     &.active {
-        border: 7px solid #bd003f;
-        border-radius: 80%;
+        border: 3px solid #bd003f;
+        border-radius: 50%;
     }
 }
 
@@ -120,6 +122,7 @@ span,
 select {
     text-transform: none;
     overflow: visible;
+    display: inline-block;
 }
 
 .active {
