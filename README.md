@@ -1,2 +1,2 @@
  JS_slider
-https://evgeniyadegtyarova.github.io/JS_slider/
+https://yevheniiadehtiarova.github.io/JS_slider/
